@@ -44,12 +44,12 @@ flowchart LR
 
 ## Data
 
-Two newline-delimited JSON files, described in [docs/data.md](docs/data.md):
+The postings come from a separate collector that I keep private. It reads four public job boards, re-checks whether postings are still open, and exports two newline-delimited JSON files, described in [docs/data.md](docs/data.md):
 
 - `postings.ndjson`: one row per posting, with its description and the skills it names.
 - `posting_checks.ndjson`: one row each time a posting was checked, with whether it was still open.
 
-The files are not published here, because they contain text copied from job sites. `data/` is ignored by git.
+The files keep every posting as collected, so the same job can appear once per board; cleaning that up is part of this project. They are not published here, because they contain text copied from job sites. `data/` is ignored by git.
 
 ## Run it
 
